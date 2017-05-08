@@ -95,7 +95,8 @@ void AddMatrix(CrossList *M, CrossList *N){
 						if(s->e)//和不为0,退出内层循环
 						  break;
 						else{//和为0,删除节点
-						      if(q == NULL)
+							N->tu--;
+							if(q == NULL)
 								N->rhead[r->i] = s->right;
 							  else
 								q->right = s->right;
@@ -142,6 +143,7 @@ void AddMatrix(CrossList *M, CrossList *N){
 						a->down = b->down;
 						b->down = a;
 					}
+					N->tu++;
 				}
 					r = r->right ;
 			}
