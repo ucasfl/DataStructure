@@ -25,7 +25,7 @@ int CreateBiTree(CSTree *T){
 
 void printTree(CSTree T,int i){
 	for ( int j = 0; j < i; j++ ) { //print blank first
-		printf( " " );
+		printf( "   " );
 	}
 	printf( "%c\n", T->data ); //print data
 	for(CSTree p = T->firstchild; p ; p = p->nextsibling){
@@ -35,7 +35,7 @@ void printTree(CSTree T,int i){
 
 int main( int argc, char **argv ) {
 	CSTree T;
-	printf( "Create a Tree: " );
+	printf( "Create a Tree(Input mode:x xxxxxxxx...): " );
 	CreateBiTree(&T);
 	printTree(T,0);
 	printf( "\n" );
