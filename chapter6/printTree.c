@@ -33,6 +33,9 @@ void printTree(CSTree T,int i){
 	}
 }//printTree 
 
+int CreateBiTree(CSTree *T);
+void printTree(CSTree T,int i);
+
 int main( int argc, char **argv ) {
 	CSTree T;
 	printf( "Create a Tree(Input mode:x xxxxxxxx...): " );

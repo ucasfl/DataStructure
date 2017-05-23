@@ -78,6 +78,12 @@ void PreOrder_iter(BiTree T){
 		  Push(&S,*(p.lchild));
 	}
 }
+Status InitStack(SqStack *s);
+Status Push(SqStack *s,BiTNode e);
+Status Pop(SqStack *s,BiTree e);
+int IsStackEmpty(SqStack *s);
+Status CreateBiTree(BiTree *T);
+void PreOrder_iter(BiTree T);
 
 int main( int argc, char **argv ) {
 	BiTree T;

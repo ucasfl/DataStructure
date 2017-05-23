@@ -94,6 +94,13 @@ int judge_completeBiTree(BiTree T){
 	return 1;
 }
 
+int IsQueueEmpty(LinkedQueue *lq);
+Status InitQueue(LinkedQueue *lq);
+Status Enqueue(LinkedQueue *lq,BiTree e);
+Status Dequeue(LinkedQueue *lq,BiTree *e);
+Status CreateBiTree(BiTree *T);
+int judge_completeBiTree(BiTree T);
+
 int main( int argc, char **argv ) {
 	BiTree T;
 	printf( "Create a tree: " );

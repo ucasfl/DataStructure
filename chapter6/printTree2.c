@@ -75,6 +75,9 @@ void Print_CTree(int e, int i){
 	  Print_CTree(p->child,i+1);
 }
 
+void CreatCSTree(CTree *T);
+void Print_CTree(int e, int i);
+
 int main( int argc, char **argv ) {
 	CreatCSTree(&T);
 	Print_CTree(T.r, 0);

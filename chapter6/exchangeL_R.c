@@ -44,6 +44,10 @@ void changeL_R(BiTree *T){
 	}
 }
 
+int CreateBiTree(BiTree *T);
+void PrintTree(BiTree T);
+void changeL_R(BiTree *T);
+
 int main( int argc, char **argv ) {
 	BiTree T;
 	printf( "Create a Tree: " );
