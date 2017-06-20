@@ -95,13 +95,17 @@ void split(BiTree T, BiTree *T1, BiTree *T2, int x){ //split one balanced tree T
 		join(T1, key, 0, index_x);
 		join(T2, key, index_x + 1, last);
 	}
+	else{ //all record > x or <= x, don't need split;
+		*T1 = T;
+		*T2 = NULL;
+	}
 } //split
 
 int get_index_x(int key[], int last, int x, int *index_x){
 	int i, j;
 	for ( i = 0; i <= last; i++ ) {
 		j = i + 1;
-		if((key[i] <= x && key[j] > x && j <= last ) || key[i] <= x && i == last){
+		if( key[i] <= x && key[j] > x &&  j <= last ){
 			*index_x = i;
 			return 1;
 		}
