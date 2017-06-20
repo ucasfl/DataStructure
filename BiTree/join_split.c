@@ -98,9 +98,10 @@ void split(BiTree T, BiTree *T1, BiTree *T2, int x){ //split one balanced tree T
 } //split
 
 int get_index_x(int key[], int last, int x, int *index_x){
-	int i;
+	int i, j;
 	for ( i = 0; i <= last; i++ ) {
-		if(key[i] == x){
+		j = i + 1;
+		if((key[i] <= x && key[j] > x && j <= last ) || key[i] <= x && i == last){
 			*index_x = i;
 			return 1;
 		}
@@ -152,7 +153,7 @@ int main( int argc, char **argv ) {
 
 	int num[40];
 	for ( int i = 0; i < 40; i++ ) {
-		num[i] = i + 1;
+		num[i] = 2*i + 1;
 	}
 	
 	BiTree T0, T1, T2;
