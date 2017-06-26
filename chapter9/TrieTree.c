@@ -158,12 +158,12 @@ void delete(Tree *T, char key[], int h){ //make sure the key[] exists in T
 		}
 		else{ //one more value in the leaf
 			KeyType *s = p->bh.ptr[order(key[i-1])]->lf.k, *last_key = s;
-			while( s && !strcmp(s->ch, key)){
+			while( s && strcmp(s->ch, key)){
 				last_key = s;
 				s = s->next;
 			}
 			if( s == last_key ){ //the first value
-				p->lf.k = s->next;
+				p->bh.ptr[order(key[i-1])]->lf.k = s->next;
 				p->bh.ptr[order(key[i-1])]->lf.num --;
 				free(s);
 			}
