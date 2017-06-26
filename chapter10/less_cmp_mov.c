@@ -8,7 +8,7 @@ void sort( int n[] );
 int main( int argc, char **argv ) {
 	int n[LEN];
 	for ( int i = 0; i < LEN; i++ ) {
-		n[i] = rand()%(10*LEN);
+		n[i] = i*7 + 7;
 	}
 	sort( n );
 	printf( "Output sorted results:\n" );
@@ -26,7 +26,7 @@ int main( int argc, char **argv ) {
 
 void sort( int n[] ){
 	int hash[10000];
-	int i, j, k;
+	int i, j;
 	for ( i = 0; i < 10000; i++ ) {//initial the table
 		hash[i] = 0;
 	}
