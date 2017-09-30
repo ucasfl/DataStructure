@@ -9,6 +9,7 @@ void selectSort(Array *List){
 }
 void GetElem(Array *List, int i, int *index){
 	int j, min = List->record[i];
+	*index = i;
 	for ( j = i + 1; j <= List->length; j++ )
 	  if (List->record[j] < min){
 		  min = List->record[j];

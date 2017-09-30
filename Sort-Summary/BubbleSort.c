@@ -6,9 +6,7 @@ void bubblesort(Array *List){
 		sorted = 1;
 		for ( int j =1; j < i; j++ ) { //zero location not use
 			if(List->record[j + 1] < List->record[j]){ //exchange value 
-				int t = List->record[j];
-				List->record[j] = List->record[j + 1];
-				List->record[j + 1] = t;
+				swap(List, j, j + 1);
 				sorted = 0; //set not sorted flag
 			}
 		}

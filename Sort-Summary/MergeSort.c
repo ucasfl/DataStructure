@@ -4,9 +4,7 @@ void mergesort(Array *List, int low, int high){
 		if (List->record[high] >= List->record[low])
 		  return;
 		else{
-			int t = List->record[high];
-			List->record[high] = List->record[low];
-			List->record[low] = t;
+			swap( List, low, high );
 			return;
 		}
 	}
